@@ -27,3 +27,57 @@ db.contacts.insertMany([
     nickname: "Andy"
   }
 ]);
+
+db.appointment_reminders.insertMany([
+  {
+    eventName: "Doctor appointment",
+    eventRepetition: false,
+    eventLocation: "Glasgow Health Centre",
+  },
+  {
+    eventName: "Physio appointment",
+    eventRepetition: true,
+    eventLocation: "Queen Elizabeth Hospital",
+  }
+]);
+
+db.tablet_reminders.insertMany([
+  {
+    tablet: "Viagra",
+    fequency: "daily"
+  },
+  {
+    tablet: "Heart pills",
+    frequency: "mealtimes"
+  }
+]);
+
+db.photos.insertMany([
+  {
+    image: "sunnyday.jpg",
+    text: "A picture of a sunny day"
+  },
+  {
+    image: "gregor.jpg",
+    text: "Gregor looking happy"
+  },
+  {
+    image: "family.jpg",
+    text: "A family photo"
+  }
+]);
+
+db.user_details.insertOne(
+  {
+    name: "Ethel"
+  }
+);
+
+db.website_links.insertMany([
+  {
+    url: "https://www.greatsudokupuzzles.com"
+  },
+  {
+    url: "https://www.crosswords.com"
+  }
+])
