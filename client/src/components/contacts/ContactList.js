@@ -2,8 +2,8 @@ import React from 'react';
 import Contact from './Contact.js';
 
 const ContactList = (props) => {
-  if (props.contacts.length === 0){
-    return <p>Waiting for Contact</p>
+  if (props.length === 0){
+    return "Waiting on Contact"
   }
 
   const contacts = props.contacts.map((contact, index) => {
