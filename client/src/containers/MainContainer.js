@@ -4,20 +4,14 @@ import ChatbotContainer from './ChatbotContainer';
 import DisplayContainer from './DisplayContainer';
 import ContactList from '../components/contacts/ContactList';
 import Home from '../home.js';
+import Request from '../helpers/request.js';
 
 class MainContainer extends Component{
 
 constructor(props) {
   super(props);
   this.state = {
-    contacts: [{
-      name: "bob",
-      phoneNumber: "09999",
-      address: " form street",
-      email: "mrbob@gmail.com",
-      relationship: "sister",
-      nickname: "bobby"
-    }],
+    contacts: [],
     appointments: [],
     exercises: [],
     medicines: [],
@@ -27,6 +21,20 @@ constructor(props) {
   }
 }
 
+componentDidMount(){
+  const request = new Request();
+  const contactPromise = request.get('/api/contacts')
+  const photoPromise = request.get('/api/photos')
+
+
+Promise.all([contactPromise, photoPromise])
+.then((data) => {
+  this.setState({
+    contacts: data[0],
+    photos: data[1]
+  })
+})
+}
 
   render(){
 
@@ -35,7 +43,7 @@ constructor(props) {
     <h2>I am a Main Container</h2>
     <ChatbotContainer/>
     <DisplayContainer contacts ={this.state.contacts}/>
-    
+
     </div>
 
   );
