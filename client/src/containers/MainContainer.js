@@ -22,10 +22,18 @@ constructor(props) {
     exercises: [],
     medicines: [],
     photos: [],
-    listOfSites: String,
+    listOfSites: [],
     userDetails: String
   }
 }
+
+  // componentDidMount(){
+  //   const request= new Request();
+  //   const listOfSitesPromise = request.get('/api/puzzles')
+  //
+  //   Promise.all()
+  //
+  // }
 
 
   render(){
@@ -34,8 +42,8 @@ constructor(props) {
     <div className ="main-container">
     <h2>I am a Main Container</h2>
     <ChatbotContainer/>
-    <DisplayContainer contacts ={this.state.contacts}/>
-    
+    <DisplayContainer contacts ={this.state.contacts} listOfSites={this.state.listOfSites}/>
+
     </div>
 
   );

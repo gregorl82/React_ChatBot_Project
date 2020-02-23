@@ -17,7 +17,7 @@ const DisplayContainer = (props) => {
        <nav>
          <ul>
            <li>
-             <Link to="/">Puzzles</Link>
+             <Link to="/puzzles">Puzzles</Link>
            </li>
            <li>
              <Link to="/photos">Photos</Link>
