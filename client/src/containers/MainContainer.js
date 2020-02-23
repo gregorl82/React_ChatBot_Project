@@ -36,18 +36,32 @@ Promise.all([contactPromise, photoPromise])
 })
 }
 
+
+// displays the navigation options if displayType is true
+displayNavigation(){
+  //const display = props.displayType;
+  if (this.state) {
+    return <DisplayContainer stuff ={this.state}/>
+  }
+  return <ChatbotContainer/>;
+}
+
+
+
+
   render(){
 
     return (
     <div className ="main-container">
     <h2>I am a Main Container</h2>
-    <ChatbotContainer/>
-    <DisplayContainer contacts ={this.state.contacts}/>
+    {this.displayNavigation()}
 
-    </div>
-
+  </div>
   );
   }
 }
+
+// <ChatbotContainer/>
+// <DisplayContainer stuff ={this.state.contacts}/>
 
 export default MainContainer;
