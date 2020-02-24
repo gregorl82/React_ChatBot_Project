@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import ChatbotContainer from './ChatbotContainer';
 import DisplayContainer from './DisplayContainer';
 import ContactList from '../components/contacts/ContactList';
-import Home from '../home.js';
 import Request from '../helpers/request.js';
 
 class MainContainer extends Component{
@@ -41,27 +40,23 @@ Promise.all([contactPromise, photoPromise])
 displayNavigation(){
   //const display = props.displayType;
   if (this.state) {
-    return <DisplayContainer stuff ={this.state}/>
+    return <DisplayContainer data ={this.state}/>
   }
   return <ChatbotContainer/>;
 }
-
-
-
 
   render(){
 
     return (
     <div className ="main-container">
     <h2>I am a Main Container</h2>
-    {this.displayNavigation()}
-
+    <ChatbotContainer/>
+    <DisplayContainer data ={this.state}/>
   </div>
   );
   }
 }
 
-// <ChatbotContainer/>
-// <DisplayContainer stuff ={this.state.contacts}/>
+
 
 export default MainContainer;

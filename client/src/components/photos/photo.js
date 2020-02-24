@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import Slider from 'react-slick';
+import {Link} from 'react-router-dom';
+
 
 
 // Import css files
@@ -24,6 +26,7 @@ render() {
   };
   return (
     <div>
+
     <Slider {...settings}>
       <div>
         <h3><img src="https://images.unsplash.com/photo-1535930749574-1399327ce78f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/></h3>
@@ -44,6 +47,11 @@ render() {
         <h3><img src="https://images.unsplash.com/photo-1518288774672-b94e808873ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/></h3>
       </div>
     </Slider>
+
+    <div style={{'z-index':99, 'position': 'absolute'}}>
+      <a href="/" id="home" >Home</a>
+    </div>
+
     </div>
   );
 }

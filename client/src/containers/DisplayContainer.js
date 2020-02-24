@@ -10,12 +10,10 @@ class DisplayContainer extends Component{
 constructor(props){
     super(props);
 
-
-
   }
 
   Puzzles() {
-    //document.getElementById('router').className="router";
+
     return <h2>Puzzles</h2>;
   }
 
@@ -24,47 +22,17 @@ constructor(props){
   }
 
   render (){
-////////////////////////////
-    console.log(this.props.stuff);
-    const stuffOne = this['props']['stuff'][1];
-  console.log(stuffOne);
-  let json = JSON.stringify(stuffOne);
-  console.log(json);
   return (
     <div id="router">
-    <h1>hello</h1>
-    <h2>{json}</h2>
-
-<h2>{this.props.stuff.address}</h2>;
-///////////////////////////
-<div>
+    <div>
     <Router >
      <div>
-       <nav>
-         <ul>
-         <li>
-           <Link to="/contacts">Contacts</Link>
-         </li>
-           <li>
-             <Link to="/puzzles">Puzzles</Link>
-           </li>
-           <li>
-             <Link to="/photos">Photos</Link>
-           </li>
-           <li>
-             <Link to="/reminders">Reminders</Link>
-           </li>
-         </ul>
-       </nav>
-
        {/* A <Switch> looks through its children <Route>s and
            renders the first one that matches the current URL. */}
        <Switch>
-         <Route path="/contacts" render={(props) => {
-           const contacts = props.contacts;
-          return <ContactList contacts = {contacts}/>}}>
+         <Route path="/contacts" >
           </Route>
-         <Route path="/photos" component={PhotoSlider}>
+         <Route path="/photos" component={PhotoSlider} >
 
           </Route>
           <Route path="/puzzles" render={() => this.Puzzles()}>
@@ -74,19 +42,17 @@ constructor(props){
 
            </Route>
 
+           <Route path="/" component={Navigation} />
+
        </Switch>
      </div>
    </Router>
     </div>
-</div>
+    </div>
 
 )
 }
 
-// function Contacts(props) {
-//
-//   return <ContactList contacts = {props.contacts}/>;
-// }
 }
 
 
@@ -96,7 +62,6 @@ export default DisplayContainer;
 //   return "loading contacts...."
 // }
 
-    //   <Route path="/navigation"  >
-      // "hello"
-      // </Route>
-      // <Route path="/contacts" component={ContactList} />
+      // render={(props) => {
+      //   const contacts = props.contacts;
+      //  return <ContactList contacts = {contacts}/>}}
