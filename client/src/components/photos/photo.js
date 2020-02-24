@@ -27,7 +27,7 @@ render() {
   return (
     <div>
 
-    <Slider {...settings}>
+    <Slider {...settings} id="photoSlider">
       <div>
         <h3><img src="https://images.unsplash.com/photo-1535930749574-1399327ce78f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/></h3>
       </div>
@@ -48,7 +48,7 @@ render() {
       </div>
     </Slider>
 
-    <div style={{'z-index':99, 'position': 'absolute'}}>
+    <div style={{'zIndex':99, 'position': 'absolute'}} className="navLinkHome">
       <a href="/" id="home" >Home</a>
     </div>
 

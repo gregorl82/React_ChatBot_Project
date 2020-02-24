@@ -1,20 +1,21 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import '../../App.css';
 
 const Navigation = (props) => {
   return (
     <ul>
 
-    <li className = "navLink">
+    <li className = "navLinkPhoto">
       <Link to="/photos" id="photos">Photos</Link>
     </li>
-    <li className = "navLink">
+    <li className = "navLinkContact">
     <Link to="/contacts" id="contacts">Contacts</Link>
     </li>
-    <li className = "navLink">
+    <li className = "navLinkReminder">
     <Link to="/reminders" id="reminders">Reminders</Link>
     </li>
-    <li className = "navLink">
+    <li className = "navLinkPuzzle">
     <Link to="/puzzles" id="puzzles">Puzzles</Link>
     </li>
 

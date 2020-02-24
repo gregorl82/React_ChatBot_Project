@@ -1,6 +1,6 @@
 
 img {
-  height: 10em;
+  height: 12em;
 }
 
 .router {
@@ -45,4 +45,73 @@ font-size: 30em;
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.navLinkPhoto {
+  font-size: 2rem;
+  position: absolute;
+  top: 9.5rem;
+  left: 10%;
+  opacity: 0;
+  color: #F5A3BE;
+  animation-name: fadeIn;
+  animation-delay: 3.5s;
+  animation-duration: 9s;
+   animation-fill-mode: forwards;
+}
+
+.navLinkReminder {
+  font-size: 2rem;
+  position: absolute;
+  top: 16.5rem;
+  left: 10%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 4.5s;
+  animation-duration: 9s;
+   animation-fill-mode: forwards;
+}
+
+.navLinkContact {
+  font-size: 2rem;
+  position: absolute;
+  top: 9.5rem;
+  left: 70%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 5.5s;
+  animation-duration: 9s;
+   animation-fill-mode: forwards;
+}
+
+.navLinkPuzzle {
+  font-size: 2rem;
+  position: absolute;
+  top: 16.5rem;
+  left: 70%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 6.5s;
+  animation-duration: 9s;
+   animation-fill-mode: forwards;
+}
+
+.navLinkHome {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2rem;
+  display: flex;
+  top: 16.5rem;
+  left: 70%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 3.5s;
+  animation-duration: 9s;
+   animation-fill-mode: forwards;
 }

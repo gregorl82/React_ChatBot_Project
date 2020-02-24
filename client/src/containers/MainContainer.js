@@ -19,33 +19,114 @@ constructor(props) {
     listOfSites: String,
     userDetails: String
   }
+}
 
 
 
 componentDidMount(){
-  const request = new Request();
-  const contactPromise = request.get('/api/contacts')
-  const photoPromise = request.get('/api/photos')
-
-
-Promise.all([contactPromise, photoPromise])
-.then((data) => {
-  this.setState({
-    contacts: data[0],
-    photos: data[1]
+  const db= firebase.firestore();
+//  const userNamesPromise=db.collection('usernames').get()
+  const contacts=db.collection('contacts').get()
+  .then(snapshot => {
+    const contactsRetreived = [];
+    snapshot.forEach(doc =>{
+      contactsRetreived.push(doc.data());
+    })
+    this.setState({contacts: contactsRetreived})
   })
-})
-}
+  .catch(err =>{
+    console.log('error getting docs', err);
+  })
+
+  const appointment_reminders=db.collection('appointment_reminders').get()
+  .then(snapshot => {
+    const appointmentsRetreived = [];
+    snapshot.forEach(doc =>{
+      appointmentsRetreived.push(doc.data());
+    })
+    this.setState({appointments: appointmentsRetreived})
+  })
+  .catch(err =>{
+    console.log('error getting docs', err);
+  })
+
+  const tablet_reminders=db.collection('tablet_reminders').get()
+  .then(snapshot => {
+    const medicinesRetreived = [];
+    snapshot.forEach(doc =>{
+      medicinesRetreived.push(doc.data());
+    })
+    this.setState({medicines: medicinesRetreived})
+  })
+  .catch(err =>{
+    console.log('error getting docs', err);
+  })
+
+  const photos=db.collection('photos').get()
+  .then(snapshot => {
+    const photosRetreived = [];
+    snapshot.forEach(doc =>{
+      photosRetreived.push(doc.data());
+    })
+    this.setState({photos: photosRetreived})
+  })
+  .catch(err =>{
+    console.log('error getting docs', err);
+  })
+
+  const usernames=db.collection('usernames').get()
+  .then(snapshot => {
+    const userNamesRetreived = [];
+    snapshot.forEach(doc =>{
+      userNamesRetreived.push(doc.data());
+    })
+    this.setState({userDetails: userNamesRetreived})
+  })
+  .catch(err =>{
+    console.log('error getting docs', err);
+  })
+
+  const website_links=db.collection('website_links').get()
+  .then(snapshot => {
+    const puzzleSitesRetreived = [];
+    snapshot.forEach(doc =>{
+      puzzleSitesRetreived.push(doc.data());
+    })
+    this.setState({listOfSites: puzzleSitesRetreived})
+  })
+  .catch(err =>{
+    console.log('error getting docs', err);
+  })
+
+  const exercise_reminders=db.collection('exercise_reminders').get()
+  .then(snapshot => {
+    const exercisesRetreived = [];
+    snapshot.forEach(doc =>{
+      exercisesRetreived.push(doc.data());
+    })
+    this.setState({exercises: exercisesRetreived})
+  })
+  .catch(err =>{
+    console.log('error getting docs', err);
+  })
 
 
-// displays the navigation options if displayType is true
-displayNavigation(){
-  //const display = props.displayType;
-  if (this.state) {
-    return <DisplayContainer data ={this.state}/>
-  }
-  return <ChatbotContainer/>;
+// Promise.all([userNamesPromise, contactsPromise])
+// .then((snapshot) => {
+// //  console.log(snapshot);
+//     snapshot.forEach(doc =>{
+//       console.log(doc);
+//     })
+//   })
+//   .catch(err =>{
+//     console.log('error getting docs', err);
+//   })
+  // this.setState({
+  //   contacts: data[0],
+  //   photos: data[1]
+  // })
 }
+
 
   render(){
 
@@ -53,11 +134,11 @@ displayNavigation(){
     <div className ="main-container">
     <h2>I am a Main Container</h2>
     <ChatbotContainer/>
-    <DisplayContainer data ={this.state}/>
+    <DisplayContainer data ={this.state} />
   </div>
   );
   }
 
-
+}
 
 export default MainContainer;
