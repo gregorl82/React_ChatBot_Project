@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import ContactList from '../components/contacts/ContactList';
+import Puzzle from '../components/puzzles/Puzzle';
 import Navigation from '../components/navigation/Navigation.js';
 import {Link} from 'react-router-dom';
 
@@ -16,7 +17,7 @@ const DisplayContainer = (props) => {
        <nav>
          <ul>
            <li>
-             <Link to="/">Puzzles</Link>
+             <Link to="/puzzles">Puzzles</Link>
            </li>
            <li>
              <Link to="/photos">Photos</Link>
@@ -37,7 +38,7 @@ const DisplayContainer = (props) => {
            <Reminders />
          </Route>
          <Route path="/puzzles">
-           <Puzzles />
+           <Puzzle />
          </Route>
          <Route path="/contacts">
            <Contacts />
