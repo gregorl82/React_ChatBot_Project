@@ -1,16 +1,22 @@
 import React from  'react';
-// import Iframe from 'react-iframe';
 
 const Puzzle = (props) => {
-  if(!props.listOfSites)
-  return "loading Puzzles"
+  // if(!props.listOfSites)
+  // return "loading Puzzles"
 
-  
+
 
   return (
+    <div>
     <ul className="component-list">
       {props.listOfSites}
+      <iframe src="https://www.websudoku.com/" frameborder="0">Sudoku</iframe>
     </ul>
+    <div>
+
+    </div>
+    </div>
+
   )
 
 }
