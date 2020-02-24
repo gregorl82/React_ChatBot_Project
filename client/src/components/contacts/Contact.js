@@ -9,12 +9,11 @@ const Contact = (props) => {
 //
   return (
     <div>
-    <p>{props.contact.name}</p>
-    <p>Phone Number: {props.contact.phoneNumber} </p>
-    <p>Address: {props.contact.address}</p>
-    <p>email: {props.contact.email}</p>
-    <p>Relationship: {props.contact.relationship}</p>
-    <p>Nickname: {props.contact.nickname}</p>
+      <h4>{props.contact.name} ({props.contact.nickname})</h4>
+      <p>Phone Number: {props.contact.phoneNumber} </p>
+      <p>Address: {props.contact.address}</p>
+      <p>email: {props.contact.email}</p>
+      <p>Relationship: {props.contact.relationship}</p>
     </div>
   )
   }
