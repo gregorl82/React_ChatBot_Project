@@ -31,7 +31,11 @@ constructor(props){
        {/* A <Switch> looks through its children <Route>s and
            renders the first one that matches the current URL. */}
        <Switch>
-         <Route path="/contacts" >
+         <Route path="/contacts" render={(props) => {
+           return <ContactList contacts={this.props.data.contacts}/>
+         }}>
+
+
           </Route>
          <Route path="/photos" component={PhotoSlider} >
 
