@@ -203,23 +203,6 @@ font-size: 30em;
   animation: move 25s linear infinite, flap .5s linear alternate infinite;
   z-index: 70;
 }
-/*
-.birdr {
-  z-index: 70;
-
-  opacity: 1;
-  top: 50px;
-  width: 10px;
-  height: 8px;
-  border: 2px solid black;
-  border-radius: 50%;
-  border-bottom-color: transparent;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  transform: rotateZ(75deg);
-  margin: 0px 8px;
-  animation: mover 25s linear infinite, flap .5s linear alternate infinite;
-} */
 
 .bird1 {
   opacity: 1;
@@ -320,4 +303,20 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+.component-list {
+  background-color: #FFFFFF;
+  z-index: 80;
+
+}
+
+.component-item {
+  background-color: #FFFFFF;
+  z-index: 80;
+
+}
+
+.puzzle-item {
+  z-index: 90;
 }
