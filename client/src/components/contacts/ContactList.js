@@ -2,9 +2,10 @@ import React from 'react';
 import Contact from './Contact.js';
 
 const ContactList = (props) => {
+
   if (props.length === 0){
-    return "Waiting on Contact"
-  }
+      return "Waiting on Contact"
+    }
 
   const contacts = props.contacts.map((contact, index) => {
     return (
@@ -15,10 +16,12 @@ const ContactList = (props) => {
       </li>
     )
   })
+
   return (
     <ul className="component-list">
+      <h3>List of contacts</h3>
       {contacts}
-      </ul>
+    </ul>
   )
 }
 
