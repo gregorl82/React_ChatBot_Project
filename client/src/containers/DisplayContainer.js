@@ -38,7 +38,7 @@ const DisplayContainer = (props) => {
            <Reminders />
          </Route>
          <Route path="/puzzles">
-           <Puzzles />
+           <Puzzle />
          </Route>
          <Route path="/contacts">
            <Contacts />
