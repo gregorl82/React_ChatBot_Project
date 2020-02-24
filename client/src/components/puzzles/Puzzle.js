@@ -5,7 +5,7 @@ const Puzzle = (props) => {
   if(!props.listOfSites)
   return "loading Puzzles"
 
-  
+
 
   return (
     <ul className="component-list">
