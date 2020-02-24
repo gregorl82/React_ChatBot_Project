@@ -19,13 +19,14 @@ constructor(props) {
     listOfSites: String,
     userDetails: String
   }
-
+}
 
 
 componentDidMount(){
   const request = new Request();
   const contactPromise = request.get('/api/contacts')
   const photoPromise = request.get('/api/photos')
+  
 
 
 Promise.all([contactPromise, photoPromise])
@@ -57,7 +58,7 @@ displayNavigation(){
   </div>
   );
   }
-
+}
 
 
 export default MainContainer;

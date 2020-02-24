@@ -36,7 +36,7 @@ constructor(props){
          <Route path="/photos" component={PhotoSlider} >
 
           </Route>
-          <Route path="/puzzles" render={() => this.Puzzles()}>
+          <Route path="/puzzles" component={Puzzle}>
 
            </Route>
            <Route path="/reminders" render={() => this.Reminders()}>
