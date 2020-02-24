@@ -18,7 +18,8 @@ constructor(props) {
     listOfSites: String,
     userDetails: String
   }
-}
+
+
 
 componentDidMount(){
   const request = new Request();
@@ -55,7 +56,6 @@ displayNavigation(){
   </div>
   );
   }
-}
 
 
 

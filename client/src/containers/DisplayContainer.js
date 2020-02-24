@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import ContactList from '../components/contacts/ContactList';
+import Puzzle from '../components/puzzles/Puzzle';
 import Navigation from '../components/navigation/Navigation.js';
 import {Link} from 'react-router-dom';
 import PhotoSlider from '../components/photos/photo.js';
