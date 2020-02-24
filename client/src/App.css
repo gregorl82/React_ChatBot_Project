@@ -1,6 +1,25 @@
+/* h1 {
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+} */
+
+.photoSlider {
+  z-index: 80;
+}
+
+.chatbot {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-delay: 3.5s;
+  animation-duration: 7s;
+   animation-fill-mode: forwards;
+}
+
 
 img {
   height: 12em;
+  z-index: 80;
 }
 
 .router {
@@ -12,93 +31,61 @@ font-size: 30em;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
 
 .navLinkPhoto {
   font-size: 2rem;
   position: absolute;
-  top: 9.5rem;
+  top: 19.5rem;
   left: 10%;
   opacity: 0;
   color: #F5A3BE;
   animation-name: fadeIn;
-  animation-delay: 3.5s;
+  animation-delay: 1.5s;
   animation-duration: 9s;
    animation-fill-mode: forwards;
+   z-index: 80;
 }
 
 .navLinkReminder {
   font-size: 2rem;
   position: absolute;
-  top: 16.5rem;
+  top: 22.5rem;
   left: 10%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 2.5s;
+  animation-duration: 9s;
+   animation-fill-mode: forwards;
+   z-index: 80;
+}
+
+.navLinkContact {
+  font-size: 2rem;
+  position: absolute;
+  top: 19.5rem;
+  left: 70%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 3.5s;
+  animation-duration: 9s;
+   animation-fill-mode: forwards;
+   z-index: 80;
+}
+
+.navLinkPuzzle {
+  font-size: 2rem;
+  position: absolute;
+  top: 22.5rem;
+  left: 70%;
   opacity: 0;
   color: #F0A3BE;
   animation-name: fadeIn;
   animation-delay: 4.5s;
   animation-duration: 9s;
    animation-fill-mode: forwards;
-}
-
-.navLinkContact {
-  font-size: 2rem;
-  position: absolute;
-  top: 9.5rem;
-  left: 70%;
-  opacity: 0;
-  color: #F0A3BE;
-  animation-name: fadeIn;
-  animation-delay: 5.5s;
-  animation-duration: 9s;
-   animation-fill-mode: forwards;
-}
-
-.navLinkPuzzle {
-  font-size: 2rem;
-  position: absolute;
-  top: 16.5rem;
-  left: 70%;
-  opacity: 0;
-  color: #F0A3BE;
-  animation-name: fadeIn;
-  animation-delay: 6.5s;
-  animation-duration: 9s;
-   animation-fill-mode: forwards;
+   z-index: 80;
 }
 
 .navLinkHome {
@@ -106,12 +93,231 @@ font-size: 30em;
   justify-content: flex-end;
   font-size: 2rem;
   display: flex;
-  top: 16.5rem;
+  top: 40.5rem;
   left: 70%;
   opacity: 0;
   color: #F0A3BE;
   animation-name: fadeIn;
-  animation-delay: 3.5s;
+  animation-delay: 2.5s;
   animation-duration: 9s;
    animation-fill-mode: forwards;
+   z-index: 80;
+}
+
+
+.container,
+.sea,
+.sky,
+.sun,
+.light,
+.bird,
+.birdr1,
+.birdr,
+.wave
+ {
+  position: absolute;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 12%;
+  background-color: rgba(255, 0, 0, 0);
+  left: 50%;
+  margin-left: -50%;
+  margin-top: 163px;
+  z-index: 10;
+}
+/*  #f5b342, #f59042, #f56342, #f54242*/
+.sky {
+  opacity: .8;
+  width: 100%;
+  height: 50%;
+  top: 0;
+  background: radial-gradient(at 50% 70%, #920, #720, #500, #200);
+  z-index: 10;
+}
+
+.sea {
+  width: 100%;
+  height: 40%;
+  top: 50%;
+  background: radial-gradient(at 50% 0%, #007, #004);
+  z-index: 60;
+}
+
+.sun {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  left: 45%;
+  z-index: 40;
+  background: linear-gradient(#ff0, #d00);
+  box-shadow: 0 0 40px 6px #f20, 0 0 150px 10px #f33;
+  animation: rise 24s ease forwards;
+}
+
+@keyframes rise {
+  0% {
+    top: 50%;
+  }
+  100% {
+    top: 21%;
+  }
+}
+
+.light {
+  opacity: .5;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(at 50% 0%, #ff0, transparent);
+  z-index: 60;
+  animation: over 10s ease forwards;
+}
+
+@keyframes over {
+  0% {
+    opacity: 0
+  }
+  ;
+  100% {
+    opacity: .2
+  }
+  ;
+}
+
+.bird {
+  opacity: 1;
+  top: 50px;
+  left: 00px;
+  width: 10px;
+  height: 8px;
+  border: 2px solid black;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotateZ(-75deg);
+  animation: move 25s linear infinite, flap .5s linear alternate infinite;
+  z-index: 70;
+}
+/*
+.birdr {
+  z-index: 70;
+
+  opacity: 1;
+  top: 50px;
+  width: 10px;
+  height: 8px;
+  border: 2px solid black;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  transform: rotateZ(75deg);
+  margin: 0px 8px;
+  animation: mover 25s linear infinite, flap .5s linear alternate infinite;
+} */
+
+.bird1 {
+  opacity: 1;
+  top: 45px;
+  left: 0px;
+  width: 10px;
+  height: 8px;
+  border: 2px solid black;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotateZ(-90deg);
+  animation: move 25s linear infinite 1.5s, flap .5s linear alternate infinite 1.5s;
+  z-index: 70;
+}
+
+.birdr1 {
+  z-index: 70;
+
+  opacity: 1;
+  top: 45px;
+  width: 10px;
+  height: 8px;
+  border: 2px solid black;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  transform: rotateZ(90deg);
+  margin: 0px 8px;
+  animation: mover 25s linear infinite 1.5s, flap .5s linear alternate infinite 1.5s;
+}
+
+.wave {
+  margin: 26px 7px;
+  border-left: 3px solid transparent;
+  border-top: 6px solid rgba(50, 50, 140, .3);
+  border-right: 50px solid transparent;
+  transform: rotatez(6deg);
+  z-index: 60;
+}
+
+
+@keyframes move {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes mover {
+  0% {
+    left: -0px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes flap {
+  0% {
+    border-radius: 90%;
+  }
+  100% {
+    border-radius: 10%;
+  }
+}
+
+body {
+  font-size: 62.5%;
+  font-style: Arial;
+}
+
+.animation-box {
+  width: 85%;
+  height: 27.5rem;
+  background-color: none;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.animation-container {
+  width: 1000rem;
+  height: 30rem;
+
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

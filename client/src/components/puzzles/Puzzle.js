@@ -9,7 +9,6 @@ const Puzzle = (props) => {
   return (
     <div>
     <ul className="component-list">
-      {props.listOfSites}
       <iframe src="https://www.websudoku.com/" frameborder="0">Sudoku</iframe>
     </ul>
     <div>

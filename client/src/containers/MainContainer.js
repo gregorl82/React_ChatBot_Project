@@ -132,7 +132,6 @@ componentDidMount(){
 
     return (
     <div className ="main-container">
-    <h2>I am a Main Container</h2>
     <ChatbotContainer/>
     <DisplayContainer data ={this.state} />
   </div>

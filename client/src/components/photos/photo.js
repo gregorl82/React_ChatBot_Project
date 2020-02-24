@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Slider from 'react-slick';
 import {Link} from 'react-router-dom';
-
+import '../../App.css';
 
 
 // Import css files
@@ -16,7 +16,7 @@ render() {
     className: 'photoSlider',
     dots: true,
     infinite: true,
-    speed: 400,
+    speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
@@ -25,9 +25,9 @@ render() {
     pauseOnDotsHover: true
   };
   return (
-    <div>
+    <div  className="photoSlider">
 
-    <Slider {...settings} id="photoSlider">
+    <Slider {...settings} >
       <div>
         <h3><img src="https://images.unsplash.com/photo-1535930749574-1399327ce78f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/></h3>
       </div>

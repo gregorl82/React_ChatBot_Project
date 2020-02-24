@@ -25,7 +25,7 @@ constructor(props){
   render (){
   return (
     <div id="router">
-    <div>
+  <div>
     <Router >
      <div>
        {/* A <Switch> looks through its children <Route>s and
@@ -49,6 +49,19 @@ constructor(props){
      </div>
    </Router>
     </div>
+    <div class="container">
+      <div class="sky"></div>
+      <div class="sea">
+      <div class="light"></div>
+      </div>
+      <div class="sun"></div>
+      <div class="bird1"></div>
+      <div class="birdr1"></div>
+      <div class="bird"></div>
+      <div class="birdr"></div>
+      </div>
+
+
     </div>
 
 )
