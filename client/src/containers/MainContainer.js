@@ -4,6 +4,7 @@ import ChatbotContainer from './ChatbotContainer';
 import DisplayContainer from './DisplayContainer';
 import ContactList from '../components/contacts/ContactList';
 import Request from '../helpers/request.js';
+import firebase from '../firebase/firestore.js'
 
 class MainContainer extends Component{
 
