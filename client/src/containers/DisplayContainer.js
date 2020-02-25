@@ -36,16 +36,17 @@ constructor(props){
          <Route exact path="/contacts" render={(props) => {
            return <ContactList contacts={this.props.data.contacts}/>
          }}>
-
-
           </Route>
+
+
          <Route exact path="/photos" component={PhotoSlider} >
 
           </Route>
           <Route exact path="/puzzles" component={Puzzle}>
-
            </Route>
-           <Route exact path="/reminders" render={(props) => {
+
+
+           <Route path="/reminders" render={(props) => {
              return <ReminderSelect appointments={this.props.data.appointments} medicines={this.props.data.medicines} exercises={this.props.data.exercises}/>
            }}>
            </Route>
