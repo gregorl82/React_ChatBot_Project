@@ -8,14 +8,14 @@ const Contact = (props) => {
   if(!props.contact){
     return "Loading contact..."
   }
-  // const url ="/contacts/" = props.contact.id;
-//
+
+  const url = "/contacts/" + props.contact.name
+
 
   return (
     <div>
-      <h4>
-{props.contact.name} ({props.contact.nickname})
-    </h4>
+
+    <Link to= {url} ><h4>{props.contact.name} ({props.contact.nickname})</h4></Link>
 
     </div>
   )
@@ -31,5 +31,7 @@ const Contact = (props) => {
 //   <ContactDetail contact={this.props.contact}
 //   };
 
+  // <Link to = {url} className = "name">
+      // </Link>
 
 export default Contact;

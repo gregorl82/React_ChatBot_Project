@@ -1,17 +1,15 @@
-/* h1 {
-  display: flex;
-  justify-content: center;
-  color: #FFFFFF;
-} */
+
 
 h3 {
   font-size: 1.7em;
   text-decoration: underline;
   padding-right: 15px;
+
 }
 
 h4 {
   font-size: 1.2em;
+
 }
 
 .photoSlider {

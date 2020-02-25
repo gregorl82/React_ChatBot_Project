@@ -110,21 +110,6 @@ componentDidMount(){
     console.log('error getting docs', err);
   })
 
-
-// Promise.all([userNamesPromise, contactsPromise])
-// .then((snapshot) => {
-// //  console.log(snapshot);
-//     snapshot.forEach(doc =>{
-//       console.log(doc);
-//     })
-//   })
-//   .catch(err =>{
-//     console.log('error getting docs', err);
-//   })
-  // this.setState({
-  //   contacts: data[0],
-  //   photos: data[1]
-  // })
 }
 
 

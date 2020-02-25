@@ -6,6 +6,7 @@ import Navigation from '../components/navigation/Navigation.js';
 import Reminder from '../components/reminders/ReminderList'
 import {Link} from 'react-router-dom';
 import PhotoSlider from '../components/photos/photo.js';
+import ContactDetail from '../components/contacts/ContactDetail.js';
 import '../App.css';
 
 class DisplayContainer extends Component{
@@ -13,6 +14,12 @@ constructor(props){
     super(props);
 
   }
+
+  findContactByName(name){
+  return this.props.data.contacts.find((contact) => {
+    return contact.name === name;
+  });
+}
 
   render (){
   return (
@@ -23,7 +30,7 @@ constructor(props){
        {/* A <Switch> looks through its children <Route>s and
            renders the first one that matches the current URL. */}
        <Switch>
-         <Route path="/contacts" render={(props) => {
+         <Route exact path="/contacts/" render={(props) => {
            return <ContactList contacts={this.props.data.contacts}/>
          }}>
 
@@ -31,6 +38,16 @@ constructor(props){
          <Route path="/photos" component={PhotoSlider} >
 
           </Route>
+
+          <Route exact path="/contacts/:name" render={(props) =>{
+
+        const name = props.match.params.name;
+        const contact = this.findContactByName(name);
+        // console.log(contact);
+        return <ContactDetail contact={contact} />
+      }}>
+          </Route>
+
           <Route path="/puzzles" component={Puzzle}>
 
            </Route>
