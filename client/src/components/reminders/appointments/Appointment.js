@@ -1,9 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-
 const Appointment = (props) => {
-
 
 return (
   <div>
@@ -12,11 +10,7 @@ return (
     <p>Date: {props.appointment.appointmentDate}</p>
     <p>Time: {props.appointment.appointmentTime}</p>
   </div>
-
-
-)
+  )
 }
-
-
 
 export default Appointment;

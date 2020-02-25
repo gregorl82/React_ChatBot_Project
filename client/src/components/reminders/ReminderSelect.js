@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import '../../App.css'
 import AppointmentList from './appointments/AppointmentList.js';
 import ExerciseList from './exercise/ExerciseList.js';
+import MedicationList from './medication/MedicationList.js'
 import {Link} from 'react-router-dom';
 import ReminderNavigation from '../navigation/ReminderNavigation';
 
@@ -26,6 +27,11 @@ render(){
 
             <Route exact path="/reminders/exercises" render={() => {
               return <ExerciseList exercises={this.props.exercises} />
+            }}>
+            </Route>
+
+            <Route exact path="/reminders/medication" render={() => {
+              return <MedicationList medications={this.props.medicines} />
             }}>
             </Route>
 
