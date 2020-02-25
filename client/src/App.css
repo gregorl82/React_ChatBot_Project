@@ -1,4 +1,22 @@
-
+.contact-detail,
+.contact-heading,
+.navLinkPhoto,
+.navLinkReminder,
+.navLinkContact,
+.navLinkPuzzle,
+.navLinkHome,
+.puzzleNavLinkHome,
+.container,
+.sea,
+.sky,
+.sun,
+.light,
+.bird,
+.birdr1,
+.birdr
+ {
+  position: absolute;
+}
 
 h3 {
   font-size: 1.7em;
@@ -24,7 +42,6 @@ h4 {
 }
 
 .contact-detail {
-  position: absolute;
   margin-left: 60%;
   margin-top: 7%;
   text-align: justify;
@@ -35,7 +52,6 @@ h4 {
 }
 
 .contact-heading {
-  position: absolute;
   margin-left: 65%;
   margin-top: 1%;
   background: #FFFFFF;
@@ -50,22 +66,17 @@ h4 {
    animation-fill-mode: forwards;
 }
 
-
 img {
   height: 12em;
   z-index: 80;
 }
 
-
-
 .App {
   text-align: center;
 }
 
-
 .navLinkPhoto {
   font-size: 2rem;
-  position: absolute;
   top: 19.5rem;
   left: 10%;
   opacity: 0;
@@ -80,7 +91,6 @@ img {
 
 .navLinkReminder {
   font-size: 2rem;
-  position: absolute;
   top: 22.5rem;
   left: 10%;
   opacity: 0;
@@ -95,7 +105,6 @@ img {
 
 .navLinkContact {
   font-size: 2rem;
-  position: absolute;
   top: 19.5rem;
   left: 70%;
   opacity: 0;
@@ -110,7 +119,6 @@ img {
 
 .navLinkPuzzle {
   font-size: 2rem;
-  position: absolute;
   top: 22.5rem;
   left: 70%;
   opacity: 0;
@@ -125,7 +133,6 @@ img {
 
 .navLinkHome {
   display: flex;
-  position: absolute;
   justify-content: flex-end;
   font-size: 2rem;
   display: flex;
@@ -143,7 +150,6 @@ img {
 
 .puzzleNavLinkHome {
   display: flex;
-  position: absolute;
   justify-content: flex-end;
   font-size: 2rem;
   display: flex;
@@ -157,19 +163,6 @@ img {
    animation-fill-mode: forwards;
    margin-top: 10px;
    z-index: 90;
-}
-
-
-.container,
-.sea,
-.sky,
-.sun,
-.light,
-.bird,
-.birdr1,
-.birdr
- {
-  position: absolute;
 }
 
 .container {
@@ -292,7 +285,6 @@ img {
 }
 
 
-
 @keyframes move {
   0% {
     left: 0px;
@@ -352,7 +344,6 @@ body {
 }
 
 .component-list {
-  /* display: flex; */
   colour: black;
   align-items: center;
   position: absolute;
