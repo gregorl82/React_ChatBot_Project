@@ -29,9 +29,9 @@ render () {
          />
        ) : null}
        </div>
-       <ul >
+
       <iframe title ="sudoku puzzle link" src="https://www.websudoku.com/" frameBorder="0" align="bottom" onLoad={this.hideSpinner}>Sudoku</iframe>
-      </ul>
+      
 
     <div style={{'zIndex':99, 'position': 'absolute'}} className="puzzleNavLinkHome">
       <a href="/" id="home" >Home</a>
