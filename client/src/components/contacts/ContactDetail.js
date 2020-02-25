@@ -1,6 +1,5 @@
-import React, {Fragment} from 'react';
-import {Link} from 'react-router-dom';
-import Contact from './Contact.js';
+import React from 'react';
+
 import '../../App.css';
 
 const ContactDetail = (props) => {
@@ -16,13 +15,9 @@ return (
 </div>
 <div className="contact-detail">
 <p>{props.contact.name}  </p>
-<br/>
 <p>{props.contact.address}</p>
-<br/>
 <p>{props.contact.email}</p>
-<br/>
 <p>{props.contact.phoneNumber}</p>
-<br/>
 <p>{props.contact.relationship}</p>
 
   </div>

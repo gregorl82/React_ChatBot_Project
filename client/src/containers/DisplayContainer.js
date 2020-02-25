@@ -4,16 +4,12 @@ import ContactList from '../components/contacts/ContactList';
 import Puzzle from '../components/puzzles/Puzzle';
 import Navigation from '../components/navigation/Navigation.js';
 import Reminder from '../components/reminders/ReminderList'
-import {Link} from 'react-router-dom';
 import PhotoSlider from '../components/photos/photo.js';
 import ContactDetail from '../components/contacts/ContactDetail.js';
 import '../App.css';
 
 class DisplayContainer extends Component{
-constructor(props){
-    super(props);
-
-  }
+    super(props){};
 
   findContactByName(name){
   return this.props.data.contacts.find((contact) => {
@@ -40,7 +36,6 @@ constructor(props){
           </Route>
 
           <Route exact path="/contacts/:name" render={(props) =>{
-
         const name = props.match.params.name;
         const contact = this.findContactByName(name);
         // console.log(contact);

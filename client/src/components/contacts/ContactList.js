@@ -12,7 +12,7 @@ const ContactList = (props) => {
     return (
       <li key={index} className="component-item">
 
-      <Contact contact={contact}/>
+      <Contact contact={contact} />
 
       </li>
     )

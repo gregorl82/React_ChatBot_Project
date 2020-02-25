@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import ChatbotContainer from './ChatbotContainer';
 import DisplayContainer from './DisplayContainer';
-import ContactList from '../components/contacts/ContactList';
-import Request from '../helpers/request.js';
 import firebase from '../firebase/firestore.js'
 
 class MainContainer extends Component{
@@ -25,7 +22,6 @@ constructor(props) {
 
 componentDidMount(){
   const db= firebase.firestore();
-//  const userNamesPromise=db.collection('usernames').get()
   const contacts=db.collection('contacts').get()
   .then(snapshot => {
     const contactsRetreived = [];

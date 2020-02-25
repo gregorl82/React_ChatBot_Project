@@ -10,7 +10,7 @@ const Puzzle = (props) => {
   return (
     <div >
     <ul className="puzzle-item">
-      <iframe src="https://www.websudoku.com/" frameBorder="0" align="bottom">Sudoku</iframe>
+      <iframe title ="sudoku puzzle link" src="https://www.websudoku.com/" frameBorder="0" align="bottom">Sudoku</iframe>
     </ul>
 
     <div style={{'zIndex':99, 'position': 'absolute'}} className="navLinkHome">
