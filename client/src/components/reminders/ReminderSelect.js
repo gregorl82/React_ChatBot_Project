@@ -1,7 +1,8 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import '../../App.css'
-import AppointmentList from './AppointmentList.js';
+import AppointmentList from './appointments/AppointmentList.js';
+import {Link} from 'react-router-dom';
 
 const ReminderSelect =(props) => {
 
@@ -10,13 +11,16 @@ const ReminderSelect =(props) => {
       <div>
         <Router>
           <Switch>
-            <Route path="/reminders/appointments" render={(props) => {
+            <Route path="/appointments" render={(props) => {
               return <AppointmentList appointments ={this.props.appointments}/>
             }
           }>
             </Route>
           </Switch>
         </Router>
+        <li className ="navLinkAppointment">
+        <Link to="/reminders/appointments">Appointments</Link>
+        </li>
       </div>
 
       // <div>

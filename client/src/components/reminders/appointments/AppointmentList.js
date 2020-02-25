@@ -24,16 +24,10 @@ const AppointmentList = (props) => {
       <h4>List of appointments</h4>
       {appointments}
       </ul>
-          <h4>{props.appointment.name} ({props.appointment.date})</h4>
-          <p>Location: {props.appointment.location}</p>
-          <p>Time: {props.appointment.time}</p>
+
        </div>
     </div>
   )
-
-
-
-
 }
 
 export default AppointmentList;
