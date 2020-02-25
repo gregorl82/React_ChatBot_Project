@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import ContactList from '../components/contacts/ContactList';
 import Puzzle from '../components/puzzles/Puzzle';
 import Navigation from '../components/navigation/Navigation.js';
+import Reminder from '../components/reminders/ReminderList'
 import {Link} from 'react-router-dom';
 import PhotoSlider from '../components/photos/photo.js';
 import '../App.css';
@@ -13,18 +14,9 @@ constructor(props){
 
   }
 
-  Puzzles() {
-
-    return <h2>Puzzles</h2>;
-  }
-
-  Reminders() {
-    return <h2>Reminders</h2>;
-  }
-
   render (){
   return (
-    <div id="router">
+    <div className="router">
   <div>
     <Router >
      <div>
@@ -35,7 +27,6 @@ constructor(props){
            return <ContactList contacts={this.props.data.contacts}/>
          }}>
 
-
           </Route>
          <Route path="/photos" component={PhotoSlider} >
 
@@ -43,7 +34,7 @@ constructor(props){
           <Route path="/puzzles" component={Puzzle}>
 
            </Route>
-           <Route path="/reminders" render={() => this.Reminders()}>
+           <Route path="/reminders" component={Reminder}>
 
            </Route>
 
@@ -53,16 +44,16 @@ constructor(props){
      </div>
    </Router>
     </div>
-    <div class="container">
-      <div class="sky"></div>
-      <div class="sea">
-      <div class="light"></div>
+    <div className="container">
+      <div className="sky"></div>
+      <div className="sea">
+      <div className="light"></div>
       </div>
-      <div class="sun"></div>
-      <div class="bird1"></div>
-      <div class="birdr1"></div>
-      <div class="bird"></div>
-      <div class="birdr"></div>
+      <div className="sun"></div>
+      <div className="bird1"></div>
+      <div className="birdr1"></div>
+      <div className="bird"></div>
+      <div className="birdr"></div>
       </div>
 
 

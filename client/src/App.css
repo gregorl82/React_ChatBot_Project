@@ -4,6 +4,16 @@
   color: #FFFFFF;
 } */
 
+h3 {
+  font-size: 1.7em;
+  text-decoration: underline;
+  padding-right: 15px;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
 .photoSlider {
   z-index: 80;
 }
@@ -11,8 +21,8 @@
 .chatbot {
   opacity: 0;
   animation-name: fadeIn;
-  animation-delay: 3.5s;
-  animation-duration: 7s;
+  animation-delay: 1.5s;
+  animation-duration: 4s;
    animation-fill-mode: forwards;
 }
 
@@ -22,9 +32,6 @@ img {
   z-index: 80;
 }
 
-.router {
-font-size: 30em;
-}
 
 
 .App {
@@ -40,10 +47,11 @@ font-size: 30em;
   opacity: 0;
   color: #F5A3BE;
   animation-name: fadeIn;
-  animation-delay: 1.5s;
+  animation-delay: 0.5s;
   animation-duration: 9s;
    animation-fill-mode: forwards;
    z-index: 80;
+   list-style-type: none;
 }
 
 .navLinkReminder {
@@ -54,10 +62,11 @@ font-size: 30em;
   opacity: 0;
   color: #F0A3BE;
   animation-name: fadeIn;
-  animation-delay: 2.5s;
+  animation-delay: 1.5s;
   animation-duration: 9s;
    animation-fill-mode: forwards;
    z-index: 80;
+   list-style-type: none;
 }
 
 .navLinkContact {
@@ -68,10 +77,11 @@ font-size: 30em;
   opacity: 0;
   color: #F0A3BE;
   animation-name: fadeIn;
-  animation-delay: 3.5s;
+  animation-delay: 2.5s;
   animation-duration: 9s;
    animation-fill-mode: forwards;
    z-index: 80;
+   list-style-type: none;
 }
 
 .navLinkPuzzle {
@@ -82,26 +92,29 @@ font-size: 30em;
   opacity: 0;
   color: #F0A3BE;
   animation-name: fadeIn;
-  animation-delay: 4.5s;
+  animation-delay: 3.5s;
   animation-duration: 9s;
    animation-fill-mode: forwards;
    z-index: 80;
+   list-style-type: none;
 }
 
 .navLinkHome {
   display: flex;
+  position: absolute;
   justify-content: flex-end;
   font-size: 2rem;
   display: flex;
-  top: 40.5rem;
+  top: 31.5rem;
   left: 70%;
   opacity: 0;
   color: #F0A3BE;
   animation-name: fadeIn;
-  animation-delay: 2.5s;
-  animation-duration: 9s;
+  animation-delay: 1.5s;
+  animation-duration: 5s;
    animation-fill-mode: forwards;
-   z-index: 80;
+   margin-top: 10px;
+   z-index: 90;
 }
 
 
@@ -112,8 +125,7 @@ font-size: 30em;
 .light,
 .bird,
 .birdr1,
-.birdr,
-.wave
+.birdr
  {
   position: absolute;
 }
@@ -122,7 +134,7 @@ font-size: 30em;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  top: 12%;
+  top: 17.5%;
   background-color: rgba(255, 0, 0, 0);
   left: 50%;
   margin-left: -50%;
@@ -141,8 +153,8 @@ font-size: 30em;
 
 .sea {
   width: 100%;
-  height: 40%;
-  top: 50%;
+  height: 45%;
+  top: 45%;
   background: radial-gradient(at 50% 0%, #007, #004);
   z-index: 60;
 }
@@ -155,7 +167,7 @@ font-size: 30em;
   z-index: 40;
   background: linear-gradient(#ff0, #d00);
   box-shadow: 0 0 40px 6px #f20, 0 0 150px 10px #f33;
-  animation: rise 24s ease forwards;
+  animation: rise 10s ease forwards;
 }
 
 @keyframes rise {
@@ -222,7 +234,7 @@ font-size: 30em;
 
 .birdr1 {
   z-index: 70;
-
+  top: 42px;
   opacity: 1;
   top: 45px;
   width: 10px;
@@ -237,14 +249,6 @@ font-size: 30em;
   animation: mover 25s linear infinite 1.5s, flap .5s linear alternate infinite 1.5s;
 }
 
-.wave {
-  margin: 26px 7px;
-  border-left: 3px solid transparent;
-  border-top: 6px solid rgba(50, 50, 140, .3);
-  border-right: 50px solid transparent;
-  transform: rotatez(6deg);
-  z-index: 60;
-}
 
 
 @keyframes move {
@@ -306,17 +310,27 @@ body {
 }
 
 .component-list {
+  display: flex;
+  align-items: center;
+  position: absolute;
   background-color: #FFFFFF;
   z-index: 80;
-
+  max-height: 40%;
+  padding: 15px;
 }
 
 .component-item {
-  background-color: #FFFFFF;
+  list-style-type: none;
   z-index: 80;
+
 
 }
 
+
 .puzzle-item {
+  position: absolute;
+  width: 90%;
+  align-items: center;
+  padding-bottom: 30%;
   z-index: 90;
 }
