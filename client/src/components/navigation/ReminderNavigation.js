@@ -12,7 +12,7 @@ const ReminderNavigation = (props) => {
     </li>
 
     <li className = "remExRem">
-      <a href="/reminders/exercise" id="appointments" style={{'z-index': 99}}>Exercise</a>
+      <a href="/reminders/exercises" id="appointments" style={{'z-index': 99}}>Exercise</a>
     </li>
 
     <li className = "remMedRem">

@@ -18,7 +18,7 @@ render(){
       <div>
           <Switch>
 
-          <Route exact path="/reminders" component={ReminderNavigation}/>
+          <Route exact path="/reminders/" component={ReminderNavigation}/>
 
             <Route exact path="/reminders/appointments" render={() => {
               return <AppointmentList appointments={this.props.appointments} />

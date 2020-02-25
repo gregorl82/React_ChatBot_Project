@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import ContactList from '../components/contacts/ContactList';
 import Puzzle from '../components/puzzles/Puzzle';
 import Navigation from '../components/navigation/Navigation.js';
-import ReminderNavigation from '../components/navigation/ReminderNavigation.js';
 import {Link} from 'react-router-dom';
 import PhotoSlider from '../components/photos/photo.js';
 import ReminderSelect from '../components/reminders/ReminderSelect';
