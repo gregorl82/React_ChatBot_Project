@@ -17,6 +17,12 @@ h4 {
   z-index: 80;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
+
 .contact-detail {
   position: absolute;
   margin-left: 60%;
@@ -124,6 +130,24 @@ img {
   font-size: 2rem;
   display: flex;
   top: 41.5rem;
+  left: 70%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 1.5s;
+  animation-duration: 5s;
+   animation-fill-mode: forwards;
+   margin-top: 10px;
+   z-index: 90;
+}
+
+.puzzleNavLinkHome {
+  display: flex;
+  position: absolute;
+  justify-content: flex-end;
+  font-size: 2rem;
+  display: flex;
+  top: 23.5rem;
   left: 70%;
   opacity: 0;
   color: #F0A3BE;
@@ -341,10 +365,7 @@ body {
 .component-item {
   list-style-type: none;
   z-index: 80;
-
-
 }
-
 
 .puzzle-item {
   position: absolute;

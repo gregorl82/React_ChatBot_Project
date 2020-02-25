@@ -1,28 +1,55 @@
-import React from  'react';
+import React, {Component} from  'react';
+import Spinner from 'react-spinkit';
 import '../../App.css';
 
-const Puzzle = (props) => {
-  // if(!props.listOfSites)
-  // return "loading Puzzles"
+class Puzzle extends Component {
+constructor(props) {
+  super(props);
+  this.state = {
+    loading: true
+  };
+}
 
+hideSpinner = () => {
+    this.setState({
+      loading: false
+    });
+  };
 
-
+render () {
   return (
-    <div >
-    <ul className="puzzle-item">
-      <iframe title ="sudoku puzzle link" src="https://www.websudoku.com/" frameBorder="0" align="bottom">Sudoku</iframe>
-    </ul>
+    <div className="puzzle-item" >
+    <div id="loading">
+    {this.state.loading ? (
+         <Spinner
+           className="loading text-center"
+           name="three-bounce"
+           color="white"
+           fadeIn="none"
+         />
+       ) : null}
+       </div>
+       <ul >
+      <iframe title ="sudoku puzzle link" src="https://www.websudoku.com/" frameBorder="0" align="bottom" onLoad={this.hideSpinner}>Sudoku</iframe>
+      </ul>
 
-    <div style={{'zIndex':99, 'position': 'absolute'}} className="navLinkHome">
+    <div style={{'zIndex':99, 'position': 'absolute'}} className="puzzleNavLinkHome">
       <a href="/" id="home" >Home</a>
     </div>
-
-
     </div>
-
   )
+}
 
 }
+
+
+  //
+  //
+// const Puzzle = (props) => {
+//   // if(!props.listOfSites)
+//   // return "loading Puzzles"
+//
+
 
 
 export default Puzzle;

@@ -38,7 +38,6 @@ class DisplayContainer extends Component{
           <Route exact path="/contacts/:name" render={(props) =>{
         const name = props.match.params.name;
         const contact = this.findContactByName(name);
-        // console.log(contact);
         return <ContactDetail contact={contact} />
       }}>
           </Route>
@@ -78,11 +77,3 @@ class DisplayContainer extends Component{
 
 
 export default DisplayContainer;
-
-// if(!props.contacts) {
-//   return "loading contacts...."
-// }
-
-      // render={(props) => {
-      //   const contacts = props.contacts;
-      //  return <ContactList contacts = {contacts}/>}}
