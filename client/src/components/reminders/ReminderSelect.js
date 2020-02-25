@@ -16,22 +16,20 @@ render(){
       <div>
           <Switch>
 
-          // Add a route for /reminders/appointments to render appointment list with data.appointments passed in as a propd
+          <Route exact path="/reminders" component={ReminderNavigation}/>
 
-            <Route exact path="/reminders" component={ReminderNavigation}/>
+            <Route exact path="/reminders/appointments" render={() => {
+              return <AppointmentList appointments={this.props.appointments} />
+            }}>
+            </Route>
 
-            // <Route exact path="/reminders/appointments" render={(props) => {
-            //   return <ReminderSelect appointments={this.props.data.appointments}/>
-            // }}>
-            // </Route>
+
+
 
           </Switch>
-          </div>
+      </div>
     </Router>
-)
-
-
-
-}
+    )
+  }
 }
 export default ReminderSelect;
