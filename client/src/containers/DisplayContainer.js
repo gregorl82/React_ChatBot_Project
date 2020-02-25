@@ -28,7 +28,9 @@ constructor(props){
          }}>
 
           </Route>
-         <Route path="/photos" component={PhotoSlider} >
+         <Route path="/photos" render={() => {
+           return <PhotoSlider photos={this.props.data.photos}/>
+         }}>
 
           </Route>
           <Route path="/puzzles" component={Puzzle}>
