@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import ContactList from '../components/contacts/ContactList';
 import Puzzle from '../components/puzzles/Puzzle';
 import Navigation from '../components/navigation/Navigation.js';
+import ReminderNavigation from '../components/navigation/ReminderNavigation.js';
 import {Link} from 'react-router-dom';
 import PhotoSlider from '../components/photos/photo.js';
 import ReminderSelect from '../components/reminders/ReminderSelect';
@@ -32,19 +33,19 @@ constructor(props){
        {/* A <Switch> looks through its children <Route>s and
            renders the first one that matches the current URL. */}
        <Switch>
-         <Route path="/contacts" render={(props) => {
+         <Route exact path="/contacts" render={(props) => {
            return <ContactList contacts={this.props.data.contacts}/>
          }}>
 
 
           </Route>
-         <Route path="/photos" component={PhotoSlider} >
+         <Route exact path="/photos" component={PhotoSlider} >
 
           </Route>
-          <Route path="/puzzles" component={Puzzle}>
+          <Route exact path="/puzzles" component={Puzzle}>
 
            </Route>
-           <Route path="/reminders" render={(props) => {
+           <Route exact path="/reminders" render={(props) => {
              return <ReminderSelect appointments={this.props.data.appointments} medicines={this.props.data.medicines} exercises={this.props.data.exercises}/>
            }}>
            </Route>

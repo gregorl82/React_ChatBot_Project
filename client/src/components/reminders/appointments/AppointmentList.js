@@ -1,8 +1,12 @@
 import React from 'react';
 import Appointment from "./Appointment.js"
+import '../../../App.css';
 
 const AppointmentList = (props) => {
-  return "Waiting on Appointments and moths"
+
+  if (props.length === 0){
+    return "Waiting on Appointments"
+  }
 
   const appointments = props.appointments.map((appointment, index) => {
     return (
@@ -14,18 +18,14 @@ const AppointmentList = (props) => {
       )
     })
 
-
-
-
   return (
     <div>
-      <div>
       <ul className="component-list">
       <h4>List of appointments</h4>
       {appointments}
       </ul>
 
-       </div>
+
     </div>
   )
 }
