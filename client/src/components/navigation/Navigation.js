@@ -16,7 +16,7 @@ const Navigation = (props) => {
     <Link to="/reminders/" className="link wobble-vertical-on-hover">Reminders</Link>
     </li>
     <li className = "navLinkPuzzle">
-    <Link to="/puzzles" className="link wobble-vertical-on-hover">Puzzles</Link>
+    <a href="https://sudoku.com/" target="_blank" className="link wobble-vertical-on-hover">Puzzles</a>
     </li>
 
     </ul>
