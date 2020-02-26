@@ -1,10 +1,11 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import '../../../App.css';
+
 
 const Appointment = (props) => {
 
 return (
-  <div>
+  <div className="reminder-detail">
     <h4>{props.appointment.appointmentName}</h4>
     <p>Location: {props.appointment.appointmentLocation}</p>
     <p>Date: {props.appointment.appointmentDate}</p>

@@ -6,6 +6,9 @@
 .navLinkPuzzle,
 .navLinkHome,
 .puzzleNavLinkHome,
+.remAppRem,
+.remExRem,
+.remMedRem,
 .container,
 .sea,
 .sky,
@@ -58,12 +61,32 @@ h4 {
   z-index: 83;
 }
 
+.reminder-detail {
+  margin-left: 10%;
+  margin-top: 7%;
+  text-align: justify;
+  z-index: 83;
+  padding: 1px;
+  background: #FFFFFF;
+
+}
+
+.reminder-heading {
+  margin-left: 5%;
+  margin-top: 10%;
+  background: #FFFFFF;
+  z-index: 83;
+}
+
 .chatbot {
   opacity: 0;
   animation-name: fadeIn;
   animation-delay: 1.5s;
   animation-duration: 4s;
    animation-fill-mode: forwards;
+   width: 100%;
+   min-height: 20%;
+
 }
 
 img {
@@ -132,7 +155,6 @@ img {
 }
 
 .navLinkHome {
-  display: flex;
   justify-content: flex-end;
   font-size: 2rem;
   display: flex;
@@ -149,7 +171,6 @@ img {
 }
 
 .puzzleNavLinkHome {
-  display: flex;
   justify-content: flex-end;
   font-size: 2rem;
   display: flex;
@@ -344,13 +365,16 @@ body {
 }
 
 .component-list {
+  margin-top: 5%;
+  margin-left: 5%;
+  display: flex;
   colour: black;
   align-items: center;
   position: absolute;
   background-color: #FFFFFF;
   z-index: 80;
   max-height: 50%;
-  padding: 15px;
+  padding: 2px;
 }
 
 .component-item {
@@ -364,6 +388,50 @@ body {
   align-items: center;
   padding-bottom: 30%;
   z-index: 90;
+}
+
+.remAppRem {
+  font-size: 2rem;
+  top: 18.5rem;
+  left: 5%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 0.5s;
+  animation-duration: 2.5s;
+   animation-fill-mode: forwards;
+   z-index: 80;
+   list-style-type: none;
+}
+
+.remExRem {
+  font-size: 2rem;
+  top: 22.5rem;
+  left: 5%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 1.5s;
+  animation-duration: 1.5s;
+   animation-fill-mode: forwards;
+   z-index: 80;
+   list-style-type: none;
+
+}
+
+.remMedRem {
+  font-size: 2rem;
+  top: 26.5rem;
+  left: 5%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 1.5s;
+  animation-duration: 3.5s;
+   animation-fill-mode: forwards;
+   z-index: 80;
+   list-style-type: none;
+
 }
 
 

@@ -32,17 +32,17 @@ class DisplayContainer extends Component{
           </Route>
 
           <Route exact path="/contacts/:name" render={(props) =>{
-        const name = props.match.params.name;
-        const contact = this.findContactByName(name);
-        return <ContactDetail contact={contact} />
-      }}>
+            const name = props.match.params.name;
+            const contact = this.findContactByName(name);
+            return <ContactDetail contact={contact} />
+          }}>
           </Route>
 
-
-<Route path="/photos" render={() => {
-  return <PhotoSlider photos={this.props.data.photos}/>
-}}>
+          <Route path="/photos" render={() => {
+            return <PhotoSlider photos={this.props.data.photos}/>
+          }}>
           </Route>
+
           <Route exact path="/puzzles" component={Puzzle}>
            </Route>
 

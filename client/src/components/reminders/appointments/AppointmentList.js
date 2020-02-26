@@ -11,20 +11,22 @@ const AppointmentList = (props) => {
   const appointments = props.appointments.map((appointment, index) => {
     return (
          <li key={index} className="component-item">
-        <div className="component">
         <Appointment appointment={appointment}/>
-        </div>
         </li>
       )
     })
 
   return (
     <div>
+    <div className="reminder-heading">
       <ul className="component-list">
       <h4>List of appointments</h4>
       {appointments}
       </ul>
-
+      </div>
+      <div style={{'zIndex':99, 'position': 'absolute'}} className="navLinkHome">
+        <a href="/" id="home" >Home</a>
+      </div>
 
     </div>
   )
