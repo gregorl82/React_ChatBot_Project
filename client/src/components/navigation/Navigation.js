@@ -13,7 +13,7 @@ const Navigation = (props) => {
     <Link to="/contacts" id="contacts">Contacts</Link>
     </li>
     <li className = "navLinkReminder">
-    <Link to="/reminders" id="reminders">Reminders</Link>
+    <Link to="/reminders/" id="reminders">Reminders</Link>
     </li>
     <li className = "navLinkPuzzle">
     <Link to="/puzzles" id="puzzles">Puzzles</Link>
