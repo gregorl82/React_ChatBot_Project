@@ -14,6 +14,7 @@ class ReminderSelect extends Component {
 
 render(){
   return  (
+    <div className="router">
     <Router>
       <div>
           <Switch>
@@ -40,6 +41,7 @@ render(){
           </Switch>
       </div>
     </Router>
+    </div>
     )
   }
 }
