@@ -24,7 +24,9 @@ const AppointmentList = (props) => {
       <h4>List of appointments</h4>
       {appointments}
       </ul>
-
+      <div style={{'zIndex':99, 'position': 'absolute'}} className="navLinkHome">
+        <a href="/" id="home" >Home</a>
+      </div>
 
     </div>
   )

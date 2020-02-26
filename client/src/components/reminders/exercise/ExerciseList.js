@@ -24,6 +24,9 @@ const ExerciseList = (props) => {
       <h4>List of exercise reminders</h4>
       {exercises}
       </ul>
+      <div style={{'zIndex':99, 'position': 'absolute'}} className="navLinkHome">
+        <a href="/" id="home" >Home</a>
+      </div>
     </div>
   )
 }

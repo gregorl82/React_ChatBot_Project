@@ -6,6 +6,9 @@
 .navLinkPuzzle,
 .navLinkHome,
 .puzzleNavLinkHome,
+.remAppRem,
+.remExRem,
+.remMedRem,
 .container,
 .sea,
 .sky,
@@ -364,6 +367,50 @@ body {
   align-items: center;
   padding-bottom: 30%;
   z-index: 90;
+}
+
+.remAppRem {
+  font-size: 2rem;
+  top: 18.5rem;
+  left: 5%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 0.5s;
+  animation-duration: 2.5s;
+   animation-fill-mode: forwards;
+   z-index: 80;
+   list-style-type: none;
+}
+
+.remExRem {
+  font-size: 2rem;
+  top: 20.5rem;
+  left: 5%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 1.5s;
+  animation-duration: 1.5s;
+   animation-fill-mode: forwards;
+   z-index: 80;
+   list-style-type: none;
+
+}
+
+.remMedRem {
+  font-size: 2rem;
+  top: 22.5rem;
+  left: 5%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 1.5s;
+  animation-duration: 3.5s;
+   animation-fill-mode: forwards;
+   z-index: 80;
+   list-style-type: none;
+
 }
 
 
