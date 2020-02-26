@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import ContactList from '../components/contacts/ContactList';
 import Puzzle from '../components/puzzles/Puzzle';
 import Navigation from '../components/navigation/Navigation.js';
+import Reminder from '../components/reminders/ReminderList'
 import {Link} from 'react-router-dom';
 import PhotoSlider from '../components/photos/photo.js';
 import ReminderSelect from '../components/reminders/ReminderSelect';
@@ -14,18 +15,9 @@ constructor(props){
 
   }
 
-  Puzzles() {
-
-    return <h2>Puzzles</h2>;
-  }
-
-  Reminders() {
-    return <h2>Reminders</h2>;
-  }
-
   render (){
   return (
-    <div id="router">
+    <div className="router">
   <div>
     <Router >
      <div>
@@ -37,13 +29,13 @@ constructor(props){
          }}>
           </Route>
 
-
-         <Route exact path="/photos" component={PhotoSlider} >
+         <Route path="/photos" render={() => {
+           return <PhotoSlider photos={this.props.data.photos}/>
+         }}>
 
           </Route>
           <Route exact path="/puzzles" component={Puzzle}>
            </Route>
-
 
            <Route path="/reminders" render={(props) => {
              return <ReminderSelect appointments={this.props.data.appointments} medicines={this.props.data.medicines} exercises={this.props.data.exercises}/>

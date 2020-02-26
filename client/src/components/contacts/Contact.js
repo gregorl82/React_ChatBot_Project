@@ -1,5 +1,8 @@
 import React, {Fragment} from 'react';
 import {Link} from 'react-router-dom';
+import '../../App.css';
+
+
 
 const Contact = (props) => {
   if(!props.contact){
@@ -7,15 +10,19 @@ const Contact = (props) => {
   }
   // const url ="/contacts/" = props.contact.id;
 //
+
   return (
     <div>
-      <h4>{props.contact.name} ({props.contact.nickname})</h4>
-      <p>Phone Number: {props.contact.phoneNumber} </p>
-      <p>Address: {props.contact.address}</p>
-      <p>email: {props.contact.email}</p>
-      <p>Relationship: {props.contact.relationship}</p>
+      <h4>
+{props.contact.name} ({props.contact.nickname})
+    </h4>
+
     </div>
   )
   }
+  // <p>Phone Number: {props.contact.phoneNumber} </p>
+  // <p>Address: {props.contact.address}</p>
+  // <p>email: {props.contact.email}</p>
+  // <p>Relationship: {props.contact.relationship}</p>
 
 export default Contact;
