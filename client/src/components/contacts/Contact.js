@@ -25,11 +25,4 @@ const Contact = (props) => {
   // <p>email: {props.contact.email}</p>
   // <p>Relationship: {props.contact.relationship}</p>
 
-// <a href="#" onClick={handleClick(props)}></a>
-//
-//   handleClick(props){
-//   <ContactDetail contact={this.props.contact}
-//   };
-
-
 export default Contact;

@@ -6,6 +6,7 @@ import Navigation from '../components/navigation/Navigation.js';
 import Reminder from '../components/reminders/ReminderList'
 import {Link} from 'react-router-dom';
 import PhotoSlider from '../components/photos/photo.js';
+import ReminderSelect from '../components/reminders/ReminderSelect';
 import '../App.css';
 
 class DisplayContainer extends Component{
@@ -23,21 +24,22 @@ constructor(props){
        {/* A <Switch> looks through its children <Route>s and
            renders the first one that matches the current URL. */}
        <Switch>
-         <Route path="/contacts" render={(props) => {
+         <Route exact path="/contacts" render={(props) => {
            return <ContactList contacts={this.props.data.contacts}/>
          }}>
-
           </Route>
+
          <Route path="/photos" render={() => {
            return <PhotoSlider photos={this.props.data.photos}/>
          }}>
 
           </Route>
-          <Route path="/puzzles" component={Puzzle}>
-
+          <Route exact path="/puzzles" component={Puzzle}>
            </Route>
-           <Route path="/reminders" component={Reminder}>
 
+           <Route path="/reminders" render={(props) => {
+             return <ReminderSelect appointments={this.props.data.appointments} medicines={this.props.data.medicines} exercises={this.props.data.exercises}/>
+           }}>
            </Route>
 
            <Route path="/" component={Navigation} />
