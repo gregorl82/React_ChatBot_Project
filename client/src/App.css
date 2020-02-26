@@ -1,38 +1,455 @@
+.contact-detail,
+.contact-heading,
+.navLinkPhoto,
+.navLinkReminder,
+.navLinkContact,
+.navLinkPuzzle,
+.navLinkHome,
+.puzzleNavLinkHome,
+.container,
+.sea,
+.sky,
+.sun,
+.light,
+.bird,
+.birdr1,
+.birdr
+ {
+  position: absolute;
+}
+
+h3 {
+  font-size: 1.7em;
+  text-decoration: underline;
+  padding-right: 15px;
+
+}
+
+h4 {
+  font-size: 1.2em;
+  color: black;
+
+}
+
+.photoSlider {
+  z-index: 80;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
+
+.contact-detail {
+  margin-left: 60%;
+  margin-top: 7%;
+  text-align: justify;
+  z-index: 83;
+  padding: 1px;
+  background: #FFFFFF;
+
+}
+
+.contact-heading {
+  margin-left: 65%;
+  margin-top: 1%;
+  background: #FFFFFF;
+  z-index: 83;
+}
+
+.chatbot {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-delay: 1.5s;
+  animation-duration: 4s;
+   animation-fill-mode: forwards;
+}
+
+img {
+  height: 12em;
+  z-index: 80;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navLinkPhoto {
+  font-size: 2rem;
+  top: 19.5rem;
+  left: 10%;
+  opacity: 0;
+  color: #F5A3BE;
+  animation-name: fadeIn;
+  animation-delay: 0.5s;
+  animation-duration: 9s;
+   animation-fill-mode: forwards;
+   z-index: 80;
+   list-style-type: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navLinkReminder {
+  font-size: 2rem;
+  top: 22.5rem;
+  left: 10%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 1.5s;
+  animation-duration: 9s;
+   animation-fill-mode: forwards;
+   z-index: 80;
+   list-style-type: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navLinkContact {
+  font-size: 2rem;
+  top: 19.5rem;
+  left: 70%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 2.5s;
+  animation-duration: 9s;
+   animation-fill-mode: forwards;
+   z-index: 80;
+   list-style-type: none;
+}
+
+.navLinkPuzzle {
+  font-size: 2rem;
+  top: 22.5rem;
+  left: 70%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 3.5s;
+  animation-duration: 9s;
+   animation-fill-mode: forwards;
+   z-index: 80;
+   list-style-type: none;
+}
+
+.navLinkHome {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
+  font-size: 2rem;
+  display: flex;
+  top: 31.5rem;
+  left: 70%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 1.5s;
+  animation-duration: 5s;
+   animation-fill-mode: forwards;
+   margin-top: 10px;
+   z-index: 90;
 }
 
-.App-link {
-  color: #61dafb;
+.puzzleNavLinkHome {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2rem;
+  display: flex;
+  top: 23.5rem;
+  left: 70%;
+  opacity: 0;
+  color: #F0A3BE;
+  animation-name: fadeIn;
+  animation-delay: 1.5s;
+  animation-duration: 5s;
+   animation-fill-mode: forwards;
+   margin-top: 10px;
+   z-index: 90;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 17.5%;
+  background-color: rgba(255, 0, 0, 0);
+  left: 50%;
+  margin-left: -50%;
+  margin-top: 163px;
+  z-index: 10;
+}
+/*  #f5b342, #f59042, #f56342, #f54242*/
+.sky {
+  opacity: .8;
+  width: 100%;
+  height: 50%;
+  top: 0;
+  background: radial-gradient(at 50% 70%, #920, #720, #500, #200);
+  z-index: 10;
+}
+
+.sea {
+  width: 100%;
+  height: 45%;
+  top: 45%;
+  background: radial-gradient(at 50% 0%, #007, #004);
+  z-index: 60;
+}
+
+.sun {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  left: 45%;
+  z-index: 40;
+  background: linear-gradient(#ff0, #d00);
+  box-shadow: 0 0 40px 6px #f20, 0 0 150px 10px #f33;
+  animation: rise 10s ease forwards;
+}
+
+@keyframes rise {
+  0% {
+    top: 50%;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    top: 21%;
+  }
+}
+
+.light {
+  opacity: .5;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(at 50% 0%, #ff0, transparent);
+  z-index: 60;
+  animation: over 10s ease forwards;
+}
+
+@keyframes over {
+  0% {
+    opacity: 0
+  }
+  ;
+  100% {
+    opacity: .2
+  }
+  ;
+}
+
+.bird {
+  opacity: 1;
+  top: 50px;
+  left: 00px;
+  width: 10px;
+  height: 8px;
+  border: 2px solid black;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotateZ(-75deg);
+  animation: move 25s linear infinite, flap .5s linear alternate infinite;
+  z-index: 70;
+}
+
+.bird1 {
+  opacity: 1;
+  top: 45px;
+  left: 0px;
+  width: 10px;
+  height: 8px;
+  border: 2px solid black;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotateZ(-90deg);
+  animation: move 25s linear infinite 1.5s, flap .5s linear alternate infinite 1.5s;
+  z-index: 70;
+}
+
+.birdr1 {
+  z-index: 70;
+  top: 42px;
+  opacity: 1;
+  top: 45px;
+  width: 10px;
+  height: 8px;
+  border: 2px solid black;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  transform: rotateZ(90deg);
+  margin: 0px 8px;
+  animation: mover 25s linear infinite 1.5s, flap .5s linear alternate infinite 1.5s;
+}
+
+
+@keyframes move {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes mover {
+  0% {
+    left: -0px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes flap {
+  0% {
+    border-radius: 90%;
+  }
+  100% {
+    border-radius: 10%;
+  }
+}
+
+body {
+  font-size: 62.5%;
+  font-style: Arial;
+}
+
+.animation-box {
+  width: 85%;
+  height: 27.5rem;
+  background-color: none;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.animation-container {
+  width: 1000rem;
+  height: 30rem;
+
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.component-list {
+  colour: black;
+  align-items: center;
+  position: absolute;
+  background-color: #FFFFFF;
+  z-index: 80;
+  max-height: 50%;
+  padding: 15px;
+}
+
+.component-item {
+  list-style-type: none;
+  z-index: 80;
+}
+
+.puzzle-item {
+  position: absolute;
+  width: 90%;
+  align-items: center;
+  padding-bottom: 30%;
+  z-index: 90;
+}
+
+
+
+  /*===================*/
+  /* WOOBLE VERTICAL
+  /*===================*/
+
+  @-webkit-keyframes wobble-vertical-on-hover {
+    16.65% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+    33.3% {
+      -webkit-transform: translateY(-6px);
+      transform: translateY(-6px);
+    }
+    49.95% {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+    }
+    66.6% {
+      -webkit-transform: translateY(-2px);
+      transform: translateY(-2px);
+    }
+    83.25% {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  @keyframes wobble-vertical-on-hover{
+    16.65% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+    33.3% {
+      -webkit-transform: translateY(-6px);
+      transform: translateY(-6px);
+    }
+    49.95% {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+    }
+    66.6% {
+      -webkit-transform: translateY(-2px);
+      transform: translateY(-2px);
+    }
+    83.25% {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  .wobble-vertical-on-hover{
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .wobble-vertical-on-hover:hover, .wobble-vertical-on-hover:focus, .wobble-vertical-on-hover:active{
+    -webkit-animation-name: wobble-vertical-on-hover;
+    animation-name: wobble-vertical-on-hover;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+
+
+@supports not(-webkit-text-stroke: 2px red) {
+  a:hover {
+    text-shadow:
+      3px 3px 0 var(--mainColor),
+      -1px -1px 0 var(--mainColor),
+      1px -1px 0 var(--mainColor),
+      -1px 1px 0 var(--mainColor),
+      1px 1px 0 var(--mainColor);
   }
 }
