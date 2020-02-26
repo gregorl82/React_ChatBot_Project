@@ -13,7 +13,7 @@ const Navigation = (props) => {
     <Link to="/contacts/" className="link wobble-vertical-on-hover">Contacts</Link>
     </li>
     <li className = "navLinkReminder">
-    <Link to="/reminders" className="link wobble-vertical-on-hover">Reminders</Link>
+    <Link to="/reminders/" className="link wobble-vertical-on-hover">Reminders</Link>
     </li>
     <li className = "navLinkPuzzle">
     <Link to="/puzzles" className="link wobble-vertical-on-hover">Puzzles</Link>

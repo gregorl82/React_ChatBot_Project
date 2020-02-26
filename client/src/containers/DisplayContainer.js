@@ -6,6 +6,7 @@ import Navigation from '../components/navigation/Navigation.js';
 import Reminder from '../components/reminders/ReminderList'
 import PhotoSlider from '../components/photos/photo.js';
 import ContactDetail from '../components/contacts/ContactDetail.js';
+import ReminderSelect from '../components/reminders/ReminderSelect';
 import '../App.css';
 
 class DisplayContainer extends Component{
@@ -29,10 +30,6 @@ class DisplayContainer extends Component{
          <Route exact path="/contacts/" render={(props) => {
            return <ContactList contacts={this.props.data.contacts}/>
          }}>
-
-          </Route>
-         <Route path="/photos" component={PhotoSlider} >
-
           </Route>
 
           <Route exact path="/contacts/:name" render={(props) =>{
@@ -42,11 +39,17 @@ class DisplayContainer extends Component{
       }}>
           </Route>
 
-          <Route path="/puzzles" component={Puzzle}>
 
+<Route path="/photos" render={() => {
+  return <PhotoSlider photos={this.props.data.photos}/>
+}}>
+          </Route>
+          <Route exact path="/puzzles" component={Puzzle}>
            </Route>
-           <Route path="/reminders" component={Reminder}>
 
+           <Route path="/reminders" render={(props) => {
+             return <ReminderSelect appointments={this.props.data.appointments} medicines={this.props.data.medicines} exercises={this.props.data.exercises}/>
+           }}>
            </Route>
 
            <Route path="/" component={Navigation} />
