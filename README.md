@@ -1,10 +1,9 @@
 <h1>Memory Keeper ChatBot Application</h1>
 <p>A prototype application for elderly people to store important information, built with ReactJS, Dialogflow and Firebase.</p>
 <h2>Brief</h2>
-<p>According to the latest statistics from the charity AgeUK, 3.6 million older people in the UK live alone, of whom over 
-2 million are over the age of 75. Thanks to advances in healthcare, people are living longer but this has put an increased 
-on social care. Technology, in particular AI assistance, could be invaluable in helping elderly people stay independent for longer.</p>
-<p>The task is to create an application for elderly people to record important information, to help support their day-to-day living.</p>
+<p>According to the latest statistics from the charity Age UK 3.6 million older people in the UK live alone, of whom over 
+2 million are over the age of 75. Thanks to advances in healthcare, people are living longer but this has put an increased strain on social care services. Technology, in particular AI assistance, could be an invaluable tool in supporting the lives of elderly people and help them to stay independent for longer.</p>
+<p>The aim of this project was to create an application for elderly people to record important information, to help support their day-to-day living.</p>
 <h2>MVP</h2>
 <p>A user should be able to:</p>
 <ul>
